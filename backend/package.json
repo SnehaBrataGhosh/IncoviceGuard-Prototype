@@ -1,0 +1,26 @@
+{
+  "name": "invoice-validation-backend",
+  "version": "1.0.0",
+  "description": "Node.js + Express backend for Invoice Data Validation Learnathon project",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "invoice",
+    "validation",
+    "express",
+    "learnathon"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
+

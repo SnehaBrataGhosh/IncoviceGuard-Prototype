@@ -1,0 +1,258 @@
+.app-root {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top left, #eef2ff, #f9fafb 45%, #f1f5f9);
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to right, rgba(129, 140, 248, 0.08), transparent);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+  gap: 1.5rem;
+  padding: 1.5rem 2rem 2rem;
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.field-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .field-row {
+    flex-direction: column;
+  }
+}
+
+label {
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+input {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.8);
+  padding: 0.5rem 0.65rem;
+  font-size: 0.93rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+  background: #f9fafb;
+}
+
+.line-items {
+  border-radius: 0.75rem;
+  border: 1px dashed rgba(148, 163, 184, 0.8);
+  padding: 0.8rem;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.line-items-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line-items-header h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.line-item-row {
+  display: grid;
+  grid-template-columns: 2fr 0.8fr 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (max-width: 720px) {
+  .line-item-row {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+}
+
+.actions {
+  margin-top: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #4f46e5, #6366f1);
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.1s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(79, 70, 229, 0.45);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-secondary {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  background: #ffffff;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #0f172a;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.btn-icon {
+  border-radius: 999px;
+  border: none;
+  background: #fee2e2;
+  color: #b91c1c;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.btn-icon:hover {
+  background: #fecaca;
+}
+
+.results-card {
+  min-height: 260px;
+}
+
+.status {
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.status-success {
+  color: #166534;
+  background: #dcfce7;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  display: inline-block;
+}
+
+.status-error {
+  color: #b91c1c;
+}
+
+.status-error-strong {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  display: inline-block;
+}
+
+.list-block {
+  margin-top: 0.9rem;
+}
+
+.list-block h3 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+
+.list.errors li {
+  color: #b91c1c;
+}
+
+.list.warnings li {
+  color: #92400e;
+}
+
+.muted {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding: 0.75rem 2rem 1.2rem;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  text-align: right;
+}
+
