@@ -17,12 +17,14 @@ app.get('/api/health', (req, res) => {
 /**
  * POST /api/validate
  * Body: {
+ *
  *   invoiceNumber: string,
  *   invoiceDate: string (ISO or dd-mm-yyyy),
  *   supplierName: string,
  *   totalAmount: number,
  *   taxAmount: number,
  *   lineItems: [{ description, quantity, unitPrice }]
+ *
  * }
  *
  * Returns validation errors and warnings.
